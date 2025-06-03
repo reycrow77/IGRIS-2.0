@@ -39,13 +39,13 @@ global.yukiJadibts = true
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.packname = '✿ ᴍɪᴋᴜ ʙᴏᴛ ✿'
-global.botname = '❀ ᴍɪᴋᴜ-ʙᴏᴛ ❀'
-global.wm = '↬ ᴍɪᴋᴜ ʙᴏᴛ • ᴄʀᴇᴀᴛᴇᴅ ʙʏ ғᴇᴅᴇ'
-global.author = 'ᴍᴀᴅᴇ ʙʏ ғᴇᴅᴇʟᴀɴʏᴛ'
-global.dev = 'ᴅᴇᴠ﹕ғᴇᴅᴇʟᴀɴʏᴛ | ᴍɪᴋᴜ ʙᴏᴛ'
-global.textbot = '✧ ᴍɪᴋᴜ ʙᴏᴛ • ᴘᴏᴡᴇʀᴇᴅ ʙʏ ғᴇᴅᴇʟᴀɴʏᴛ ✧'
-global.etiqueta = '✦ ғᴇᴅᴇʟᴀɴʏᴛ'
+global.packname = '✿ ɪɢʀɪs_ʙᴏᴛ  ✿'
+global.botname = '❀ ɪɢʀɪs_ʙᴏᴛ ❀'
+global.wm = '↬ ɪɢʀɪs_ʙᴏᴛ • ᴄʀᴇᴀᴛᴇᴅ ʙʏ ʜᴀʀᴠᴀᴋ'
+global.author = 'ᴍᴀᴅᴇ ʙʏ ʜᴀʀᴠᴀᴋ'
+global.dev = 'ᴅᴇᴠ ɪɢʀɪs_ʙᴏᴛ | ʜᴀʀᴠᴇᴋ'
+global.textbot = '✧ ɪɢʀɪs ʙᴏᴛ • ᴘᴏᴡᴇʀᴇᴅ ʙʏ ʜᴀʀᴠᴀᴋ ✧'
+global.etiqueta = '✦ ʜᴀʀᴠᴀᴋ'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
