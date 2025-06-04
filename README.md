@@ -55,7 +55,7 @@ apt update && apt upgrade && pkg install -y git nodejs ffmpeg imagemagick yarn
 ```
 
 ```bash
-git clone https://github.com/fedelanYTCLUB/Sacura_Bot && cd Sacura_Bot
+git clone https://github.com/reycrow77/IGRIS-2.0 && cd IGRIS-2.0
 ```
 
 ```bash
@@ -83,7 +83,7 @@ npm start
 ❒ Abre Termux y navega al directorio del bot:
    
    ```bash
-    cd Yuki_Suou-Bot
+    cd IGRIS-2.0
    ```
 
 ❒ Inicia el bot nuevamente:
@@ -97,7 +97,7 @@ npm start
 > Si después de instalar el bot en Termux y iniciar la session del bot (deseas poner tu número es la lista de owner pon este comando:
 
    ```bash
-    cd Yuki_Suou-Bot && nano settings.js
+    cd IGRIS-2.0 && nano settings.js
    ```
 
 </details>
