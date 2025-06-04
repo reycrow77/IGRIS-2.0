@@ -15,7 +15,7 @@ let handler = async (m, { conn, args }) => {
   const moneda = global.moneda || 'monedas';
 
   let txt = `
-> Holis, Soy ${botname}\n   ${(conn.user.jid == global.conn.user.jid ? '*͜͡☔ P͜͡r͜͡i͜͡n͜͡c͜͡i͜͡p͜͡a͡l 🌸*͜͡' : '*͜͡🦋 S͜͡u͜͡b͜͡ B͜͡o͜͡t͜͡ 💙*͜͡')}
+> Holis, Soy ${botname}\n   ${(conn.user.jid == global.conn.user.jid ? '*͜͡☔ 𝙱𝙾𝚃 𝙾𝙵𝙲 👑*͜͡' : '*͜͡🍃 𝚂𝚄𝙱-𝙱𝙾𝚃 💙*͜͡')}
 *⚘ ᥴ᥆mᥙᥒіძᥲძ ᥆𝖿ᥴ:* 
 https://chat.whatsapp.com/GgPP07cL54iL6C1lrwX0fz
 
@@ -30,7 +30,7 @@ Aquí tienes la lista de mis comandos:
 │ 🍫 *Baileys:* MekBaileys
 ╰─➤ ✎
 
-> Puedes crear tu *SUB-BOT* con #code o #qr ☔
+> Puedes crear tu *SUB-BOT* con #code o #qr 💙
 
 > ･::ﾟ･ﾟ☆ 𝐈𝐧𝐟𝐨 𝐁𝐨𝐭 ☆･ﾟ:･ﾟ::･> 
 Comandos para ver el estado e información de la Bot.
