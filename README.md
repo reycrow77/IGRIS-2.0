@@ -148,5 +148,5 @@ href="https://dash.skyultraplus.com/home"><img src="https://qu.ax/zFzXF.png" hei
 
 ### **`👑 Propietario`**
 <a
-href="https://github.com/reycrow77"><img src="https://github.com/regcrow77.png" width="130" height="130" alt="
+href="https://github.com/reycrow77"><img src="https://github.com/reycrow77.png" width="130" height="130" alt="
 diego"/></a>
