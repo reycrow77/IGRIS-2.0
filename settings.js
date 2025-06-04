@@ -57,13 +57,13 @@ global.avatar = 'https://files.catbox.moe/q16qxv.jpg'
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
-global.gp1 = ''
-global.comunidad1 = ''
-global.channel = ''
-global.channel2 = ''
-global.md = 'https://github.com/'
-global.correo = ''
-global.cn ='';
+global.gp1 = 'https://chat.whatsapp.com/KPbFD3ONgiY1OB2YJ5SDUt'
+global.comunidad1 = 'https://chat.whatsapp.com/GgPP07cL54iL6C1lrwX0fz'
+global.channel = 'https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N'
+global.channel2 = 'https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N'
+global.md = 'https://github.com/reycrow77/IGRIS-2.0'
+global.correo = 'fedelanyt20@gmail.com'
+global.cn ='https://whatsapp.com/channel/0029VbApe6jG8l5Nv43dsC2N';
 
 //*─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─⭒─ׄ─ׅ─ׄ─*
 
