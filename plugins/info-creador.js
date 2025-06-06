@@ -23,7 +23,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
         contextInfo: {
             externalAdReply: {
                 showAdAttribution: true,
-                title: 'һ᥆ᥣᥲ s᥆ᥡ s𝗍ᥲ𝖿𝖿 ძᥱ mіkᥙ ᑲ᥆𝗍.',
+                title: 'һ᥆ᥣᥲ s᥆ᥡ ᥴrᥱᥲძ᥆r ძᥱ іgrіs_ᑲ᥆𝗍.',
                 body: dev,
                 thumbnailUrl: 'https://files.catbox.moe/xlc90u.jpg',
                 sourceUrl: 'https://wa.me/573015270038?text=Hola+quiero+adquirir+bot',
@@ -35,7 +35,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
         quoted: m
     });
 
-    let txt = `👋 *Hola \`${username}\` este es*\n*el contacto de mi staff*`;
+    let txt = `👋 *Hola \`${username}\` este es*\n*el contacto de mi creador*`;
 
     await conn.sendMessage(m.chat, { text: txt });
 };
