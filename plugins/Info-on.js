@@ -28,7 +28,7 @@ let handler = async (m, { conn, args }) => {
 .nsfw
 .modoadmin
 
-🩵 *OPCIONES PARA MI CREADOR (FEDELANYT)*
+🩵 *OPCIONES PARA MI CREADOR*
 
 .antiprivado on
 .public on
