@@ -30,11 +30,11 @@ let handler = async (m, { conn, args }) => {
 
 🩵 *OPCIONES PARA MI CREADOR*
 
-.antiprivado on
-.public on
-.serbot on
-.restrict on
-.autoread on
+.antiprivado
+.public
+.serbot
+.restrict
+.autoread
 > ${dev}`.trim();
 
   await conn.sendMessage(m.chat, {
