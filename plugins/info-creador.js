@@ -25,7 +25,7 @@ let handler = async (m, { conn, usedPrefix, text, args, command }) => {
                 showAdAttribution: true,
                 title: 'һ᥆ᥣᥲ s᥆ᥡ ᥴrᥱᥲძ᥆r ძᥱ іgrіs_ᑲ᥆𝗍.',
                 body: dev,
-                thumbnailUrl: 'https://files.catbox.moe/xlc90u.jpg',
+                thumbnailUrl: 'https://files.catbox.moe/q16qxv.jpg',
                 sourceUrl: 'https://wa.me/573015270038?text=Hola+quiero+adquirir+bot',
                 mediaType: 1,
                 renderLargerThumbnail: true
