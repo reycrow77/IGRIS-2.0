@@ -1,49 +1,36 @@
-import fs from 'fs'
-import fetch from 'node-fetch'
-import { xpRange } from '../lib/levelling.js'
-import { promises } from 'fs'
-import { join } from 'path'
+let handler = async (m, { conn, args }) => {
+  let userId = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender;
+  let user = global.db.data.users[userId];
+  let name = conn.getName(userId);
+  let _uptime = process.uptime() * 1000;
+  let uptime = clockString(_uptime);
+  let totalreg = Object.keys(global.db.data.users).length;
+  let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
 
-let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, command }) => {
-    try {
-    let { exp, diamantes, level, role } = global.db.data.users[m.sender]
-    let { min, xp, max } = xpRange(level, global.multiplier)
-    let name = await conn.getName(m.sender)
-    exp = exp || 'Desconocida';
-    role = role || 'Aldeano';
+  const botname = global.botname || "NombreDelBot";
+  const textbot = global.textbot || "Descripción del bot";
+  const banner = global.banner || "URL de la imagen del banner";
+  const redes = global.redes || "URL de las redes sociales";
+  const channelRD = global.channelRD || { id: 'id_del_canal', name: 'Nombre del canal' };
+  const moneda = global.moneda || 'monedas';
 
-    const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
-    const _uptime = process.uptime() * 1000;
-    const uptime = clockString(_uptime);
+  let txt = `
+> Holis, Soy ${botname}\n   ${(conn.user.jid == global.conn.user.jid ? '*͜͡☔ P͜͡r͜͡i͜͡n͜͡c͜͡i͜͡p͜͡a͡l 🅞🅕🅒 🌸*͜͡' : '*͜͡🦋 S͜͡u͜͡b͜͡ B͜͡o͜͡t͜͡ 🅢 💙*͜͡')}
+*⚘ ᥴ᥆mᥙᥒіძᥲძ ᥆𝖿ᥴ:* 
+https://chat.whatsapp.com/FX6eYrqXtt9L76NDpOm2K7
 
-    let totalreg = Object.keys(global.db.data.users).length
-    let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
+Aquí tienes la lista de mis comandos:
 
-        await m.react('🌹')
-        let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
-        let perfil = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://files.catbox.moe/ninsr8.jpg')
+╭┈────── ❃
+│ 👤 *Usuario:* @${userId.split('@')[0]}
+│ 🪷 *Modo:* Privado
+│ 🕒 *Activa hace:* ${uptime}
+│ 👥 *Usuarios:* *${totalreg}*
+│ 🤍 *Comandos:* ${totalCommands}
+│ 🍫 *Baileys:* MekBaileys
+╰─➤ ✎
 
-const vid = ['https://files.catbox.moe/39rx3n.mp4', 'https://files.catbox.moe/5fbi9s.mp4', 'https://files.catbox.moe/biggyj.mp4']
-
-        let menu = `
-ㅤㅤㅤ⩁꯭ ͡  ͡ᩚ꯭ ꯭⩁ㅤㅤ𑁯🤍ᰍㅤㅤ⩁꯭ ͡  ͡ᩚ꯭ ꯭⩁
-೯ ׅ 👤 ¡Hᴏʟᴀ! ¿Cᴏᴍᴏ Esᴛᴀ́s? ׄ ᦡᦡ
-ㅤ꒰͜͡${taguser}
-ㅤㅤ♡𑂳ᩙㅤ ּ ${saludo} ׄ ㅤタス
-
-*🧇 Activo:* ${uptime}
-*👥 Usuarios:* ${totalreg}
-*🆙 Versión:* 3.0.0
-
-*💎 Gemas:* ${diamantes}
-*🍸 Exp:* ${exp}
-*🫖 Nivel:* ${level}
-*🍢 Rango:* ${role}
-☁️ ${botreal}
-${readMore}
-ㅤ ㅤ   乂 *ʟɪsᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs* 乂
-
-> Puedes crear tu *SUB-BOT* con #code o #qr 💙
+> Puedes crear tu *SUB-BOT* con #code o #qr ☔
 
 > ･::ﾟ･ﾟ☆ 𝐈𝐧𝐟𝐨 𝐁𝐨𝐭 ☆･ﾟ:･ﾟ::･> 
 Comandos para ver el estado e información de la Bot.
@@ -561,42 +548,42 @@ Comandos de juegos para jugar con tus amigos, ¡a divertirse!
 *꒰ 🎲 ꒱* #ttt
 » Crea una sala de juego.
 
-`.trim()
+> ${dev}`.trim();
 
-        await conn.sendMessage(m.chat, {
-            video: { url: vid.getRandom() }, // Vid
-            caption: menu,
-            contextInfo: {
-                mentionedJid: [m.sender],
-                isForwarded: true,
-                forwardingScore: 999,
-                externalAdReply: {
-                    title: '⏤͟͞ू⃪ ፝͜⁞Sʜᴀᴅᴏᴡ✰⃔࿐\nNᴜᴇᴠᴀ Vᴇʀsɪᴏɴ Uʟᴛʀᴀ 🌤️',
-                    thumbnailUrl: perfil,
-                    mediaType: 1,
-                    renderLargerThumbnail: false,
-                },
-            },
-            gifPlayback: true,
-            gifAttribution: 0
-        }, { quoted: null })
-    } catch (e) {
-        await m.reply(`*✖️ Ocurrió un error al enviar el menú.*\n\n${e}`)
-    }
-}
+  await conn.sendMessage(m.chat, {
+    text: txt,
+    contextInfo: {
+      mentionedJid: [m.sender, userId],
+      isForwarded: true,
+      forwardedNewsletterMessageInfo: {
+        newsletterJid: channelRD.id,
+        newsletterName: channelRD.name,
+        serverMessageId: -1,
+      },
+      forwardingScore: 99999999,
+      externalAdReply: {
+        title: botname,
+        body: wm,
+        thumbnailUrl: banner,
+        sourceUrl: redes,
+        mediaType: 1,
+        showAdAttribution: true,
+        renderLargerThumbnail: true,
+      },
+    },
+  }, { quoted: m });
 
-handler.help = ['menuff'];
+};
+
+handler.help = ['menu'];
 handler.tags = ['main'];
-handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|cmd)$/i;
-handler.fail = null;
+handler.command = ['menutest', 'menu', 'help'];
 
 export default handler;
 
-const more = String.fromCharCode(8206)
-const readMore = more.repeat(4001)
 function clockString(ms) {
-  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
-  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
-  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
-  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
-            }
+  let seconds = Math.floor((ms / 1000) % 60);
+  let minutes = Math.floor((ms / (1000 * 60)) % 60);
+  let hours = Math.floor((ms / (1000 * 60 * 60)) % 24);
+  return `${hours} Horas ${minutes} Minutos ${seconds} Segundos`;
+}
