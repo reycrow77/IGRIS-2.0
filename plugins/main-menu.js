@@ -16,13 +16,13 @@ let handler = async (m, { conn, args }) => {
 
   let txt = `
   *🦋.......⋆｡˚☁︎｡⋆｡ ☔ ⋆｡˚☁︎｡⋆........🦋*
- ೯ ׅ 👤 ¡Hᴏʟᴀ! ꒰͜͡${taguser} ¿Cᴏᴍᴏ Esᴛᴀ́s? ׄ ᦡᦡ
-${botname} ${(conn.user.jid == global.conn.user.jid ? '*͜͡☔ BOT PRINCIPAL 🌸*͜͡' : '*͜͡🦋 SUB-BOT 💙*͜͡')}
-೯💙${saludo} ׄ タス 
+ ೯👤 ¡Hᴏʟᴀ! ${taguser} ¿Cᴏᴍᴏ Esᴛᴀ́s? ᦡᦡ ೯💙${saludo} ׄ タス 
+${(conn.user.jid == global.conn.user.jid ? '*͜͡☔ BOT PRINCIPAL 🌸*͜͡' : '*͜͡🦋 SUB-BOT 💙*͜͡')}
 
 > *Aquí tienes la lista de mis comandos:*
 
 ╭┈───────➤ 👑
+│ 🤖 *nembot:* ${botname}
 │ 🪷 *Modo:* Privado
 │ 🕒 *Activa hace:* ${uptime}
 │ 👥 *Usuarios:* *${totalreg}*
