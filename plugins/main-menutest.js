@@ -559,42 +559,42 @@ Comandos de juegos para jugar con tus amigos, ¡a divertirse!
 *꒰ 🎲 ꒱* #ttt
 » Crea una sala de juego.
 
-> ${dev}`.trim();
+`.trim()
 
-  await conn.sendMessage(m.chat, {
-    text: txt,
-    contextInfo: {
-      mentionedJid: [m.sender, userId],
-      isForwarded: true,
-      forwardedNewsletterMessageInfo: {
-        newsletterJid: channelRD.id,
-        newsletterName: channelRD.name,
-        serverMessageId: -1,
-      },
-      forwardingScore: 99999999,
-      externalAdReply: {
-        title: botname,
-        body: wm,
-        thumbnailUrl: banner,
-        sourceUrl: redes,
-        mediaType: 1,
-        showAdAttribution: true,
-        renderLargerThumbnail: true,
-      },
-    },
-  }, { quoted: m });
+        await conn.sendMessage(m.chat, {
+            video: { url: vid.getRandom() }, // Vid
+            caption: menu,
+            contextInfo: {
+                mentionedJid: [m.sender],
+                isForwarded: true,
+                forwardingScore: 999,
+                externalAdReply: {
+                    title: '⏤͟͞ू⃪ ፝͜⁞Sʜᴀᴅᴏᴡ✰⃔࿐\nNᴜᴇᴠᴀ Vᴇʀsɪᴏɴ Uʟᴛʀᴀ 🌤️',
+                    thumbnailUrl: perfil,
+                    mediaType: 1,
+                    renderLargerThumbnail: false,
+                },
+            },
+            gifPlayback: true,
+            gifAttribution: 0
+        }, { quoted: null })
+    } catch (e) {
+        await m.reply(`*✖️ Ocurrió un error al enviar el menú.*\n\n${e}`)
+    }
+}
 
-};
-
-handler.help = ['menu'];
+handler.help = ['menuff'];
 handler.tags = ['main'];
-handler.command = ['menutest', 'menu', 'help'];
+handler.command = /^(menutest|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|cmd)$/i;
+handler.fail = null;
 
 export default handler;
 
+const more = String.fromCharCode(8206)
+const readMore = more.repeat(4001)
 function clockString(ms) {
-  let seconds = Math.floor((ms / 1000) % 60);
-  let minutes = Math.floor((ms / (1000 * 60)) % 60);
-  let hours = Math.floor((ms / (1000 * 60 * 60)) % 24);
-  return `${hours} Horas ${minutes} Minutos ${seconds} Segundos`;
-}
+  let h = isNaN(ms) ? '--' : Math.floor(ms / 3600000)
+  let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
+  let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
+  return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
+      }
