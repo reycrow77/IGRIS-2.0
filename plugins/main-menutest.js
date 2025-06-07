@@ -558,7 +558,6 @@ Comandos de juegos para jugar con tus amigos, ¡a divertirse!
 » Juega un pvp contra otro usuario.
 *꒰ 🎲 ꒱* #ttt
 » Crea una sala de juego.
-
 `.trim()
 
         await conn.sendMessage(m.chat, {
