@@ -23,10 +23,10 @@ ${(conn.user.jid == global.conn.user.jid ? '*͜͡☔ BOT PRINCIPAL 🌸*͜͡' : 
 
 ╭┈───────➤ 👑
 │ 🤖 *nemebot:* ${botname}
-│ 🪐 *Canal OFC:* https://whatsapp.com/channel/0029VbAfd7zDDmFXm5adcF31
+│ 🪐 *Canal OFC:*  https://whatsapp.com/channel/0029VbAfd7zDDmFXm5adcF31
 │ 🪷 *Modo:* Privado
 │ 🕒 *Activa hace:* ${uptime}
-│ 👥 *Usuarios:* *${totalreg}*
+│ 👥 *Usuarios:* ${totalreg}
 │ 🤍 *Comandos:* ${totalCommands}
 │ 🍫 *Baileys:* MekBaileys
 ╰─➤ 
