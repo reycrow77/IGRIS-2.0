@@ -23,23 +23,25 @@ let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, com
         let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
         let perfil = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://files.catbox.moe/ninsr8.jpg')
 
-const vid = ['https://qu.ax/gfgZa.mp4', 'https://qu.ax/gfgZa.mp4', 'https://qu.ax/gfgZa.mp4']
+const vid = ['https://files.catbox.moe/39rx3n.mp4', 'https://files.catbox.moe/5fbi9s.mp4', 'https://files.catbox.moe/biggyj.mp4']
 
-  let txt = `
-> Holis, Soy ${botname}\n   ${(conn.user.jid == global.conn.user.jid ? '*͜͡☔ 𝙱𝙾𝚃 𝙾𝙵𝙲 👑*͜͡' : '*͜͡🍃 𝚂𝚄𝙱-𝙱𝙾𝚃 💙*͜͡')}
-*⚘ ᥴ᥆mᥙᥒіძᥲძ ᥆𝖿ᥴ:* 
-https://chat.whatsapp.com/GgPP07cL54iL6C1lrwX0fz
+        let menu = `
+ㅤㅤㅤ⩁꯭ ͡  ͡ᩚ꯭ ꯭⩁ㅤㅤ𑁯🤍ᰍㅤㅤ⩁꯭ ͡  ͡ᩚ꯭ ꯭⩁
+೯ ׅ 👤 ¡Hᴏʟᴀ! ¿Cᴏᴍᴏ Esᴛᴀ́s? ׄ ᦡᦡ
+ㅤ꒰͜͡${taguser}
+ㅤㅤ♡𑂳ᩙㅤ ּ ${saludo} ׄ ㅤタス
 
-Aquí tienes la lista de mis comandos:
+*🧇 Activo:* ${uptime}
+*👥 Usuarios:* ${totalreg}
+*🆙 Versión:* 3.0.0
 
-╭┈────── ❃
-│ 👤 *Usuario:* @${userId.split('@')[0]}
-│ 🪷 *Modo:* Privado
-│ 🕒 *Activa hace:* ${uptime}
-│ 👥 *Usuarios:* *${totalreg}*
-│ 🤍 *Comandos:* ${totalCommands}
-│ 🍫 *Baileys:* MekBaileys
-╰─➤ ✎
+*💎 Gemas:* ${diamantes}
+*🍸 Exp:* ${exp}
+*🫖 Nivel:* ${level}
+*🍢 Rango:* ${role}
+☁️ ${botreal}
+${readMore}
+ㅤ ㅤ   乂 *ʟɪsᴛᴀ ᴅᴇ ᴄᴏᴍᴀɴᴅᴏs* 乂
 
 > Puedes crear tu *SUB-BOT* con #code o #qr 💙
 
@@ -558,6 +560,7 @@ Comandos de juegos para jugar con tus amigos, ¡a divertirse!
 » Juega un pvp contra otro usuario.
 *꒰ 🎲 ꒱* #ttt
 » Crea una sala de juego.
+
 `.trim()
 
         await conn.sendMessage(m.chat, {
@@ -584,7 +587,7 @@ Comandos de juegos para jugar con tus amigos, ¡a divertirse!
 
 handler.help = ['menuff'];
 handler.tags = ['main'];
-handler.command = /^(menutest|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|cmd)$/i;
+handler.command = /^(menu|menú|memu|memú|help|info|comandos|2help|menu1.2|ayuda|commands|commandos|cmd)$/i;
 handler.fail = null;
 
 export default handler;
@@ -596,4 +599,4 @@ function clockString(ms) {
   let m = isNaN(ms) ? '--' : Math.floor(ms / 60000) % 60
   let s = isNaN(ms) ? '--' : Math.floor(ms / 1000) % 60
   return [h, m, s].map(v => v.toString().padStart(2, 0)).join(':')
-      }
+            }
