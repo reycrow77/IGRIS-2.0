@@ -22,7 +22,7 @@ ${(conn.user.jid == global.conn.user.jid ? '*͜͡☔ BOT PRINCIPAL 🌸*͜͡' : 
 > *Aquí tienes la lista de mis comandos:*
 
 ╭┈───────➤ 👑
-│ 🤖 *nembot:* ${botname}
+│ 🤖 *nemebot:* ${botname}
 │ 🪷 *Modo:* Privado
 │ 🕒 *Activa hace:* ${uptime}
 │ 👥 *Usuarios:* *${totalreg}*
