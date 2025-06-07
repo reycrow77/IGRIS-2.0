@@ -1,18 +1,29 @@
-let handler = async (m, { conn, args }) => {
-  let userId = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.sender;
-  let user = global.db.data.users[userId];
-  let name = conn.getName(userId);
-  let _uptime = process.uptime() * 1000;
-  let uptime = clockString(_uptime);
-  let totalreg = Object.keys(global.db.data.users).length;
-  let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length;
+import fs from 'fs'
+import fetch from 'node-fetch'
+import { xpRange } from '../lib/levelling.js'
+import { promises } from 'fs'
+import { join } from 'path'
 
-  const botname = global.botname || "NombreDelBot";
-  const textbot = global.textbot || "Descripción del bot";
-  const banner = global.banner || "URL de la imagen del banner";
-  const redes = global.redes || "URL de las redes sociales";
-  const channelRD = global.channelRD || { id: 'id_del_canal', name: 'Nombre del canal' };
-  const moneda = global.moneda || 'monedas';
+let handler = async (m, { conn, usedPrefix, usedPrefix: _p, __dirname, text, command }) => {
+    try {
+    let { exp, diamantes, level, role } = global.db.data.users[m.sender]
+    let { min, xp, max } = xpRange(level, global.multiplier)
+    let name = await conn.getName(m.sender)
+    exp = exp || 'Desconocida';
+    role = role || 'Aldeano';
+
+    const taguser = '@' + m.sender.split('@s.whatsapp.net')[0];
+    const _uptime = process.uptime() * 1000;
+    const uptime = clockString(_uptime);
+
+    let totalreg = Object.keys(global.db.data.users).length
+    let rtotalreg = Object.values(global.db.data.users).filter(user => user.registered == true).length
+
+        await m.react('🌹')
+        let who = m.mentionedJid && m.mentionedJid[0] ? m.mentionedJid[0] : m.fromMe ? conn.user.jid : m.sender
+        let perfil = await conn.profilePictureUrl(who, 'image').catch(_ => 'https://files.catbox.moe/ninsr8.jpg')
+
+const vid = ['https://qu.ax/gfgZa.mp4', 'https://qu.ax/gfgZa.mp4', 'https://qu.ax/gfgZa.mp4']
 
   let txt = `
 > Holis, Soy ${botname}\n   ${(conn.user.jid == global.conn.user.jid ? '*͜͡☔ 𝙱𝙾𝚃 𝙾𝙵𝙲 👑*͜͡' : '*͜͡🍃 𝚂𝚄𝙱-𝙱𝙾𝚃 💙*͜͡')}
