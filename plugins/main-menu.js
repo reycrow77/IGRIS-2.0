@@ -16,20 +16,19 @@ let handler = async (m, { conn, args }) => {
 
   let txt = `
   *🦋.......⋆｡˚☁︎｡⋆｡ ☔ ⋆｡˚☁︎｡⋆........🦋*
- ೯ ׅ 👤 ¡Hᴏʟᴀ! ¿Cᴏᴍᴏ Esᴛᴀ́s? ׄ ᦡᦡ
-${botname} ${(conn.user.jid == global.conn.user.jid ? '*͜͡☔ P͜͡r͜͡i͜͡n͜͡c͜͡i͜͡p͜͡a͡l 🅞🅕🅒 🌸*͜͡' : '*͜͡🦋 S͜͡u͜͡b͜͡ B͜͡o͜͡t͜͡ 🅢 💙*͜͡')}
-꒰͜͡${taguser}
-ㅤㅤ♡𑂳ᩙㅤ ּ ${saludo} ׄ ㅤタス 
-Aquí tienes la lista de mis comandos:
+ ೯ ׅ 👤 ¡Hᴏʟᴀ! ꒰͜͡${taguser} ¿Cᴏᴍᴏ Esᴛᴀ́s? ׄ ᦡᦡ
+${botname} ${(conn.user.jid == global.conn.user.jid ? '*͜͡☔ BOT PRINCIPAL 🌸*͜͡' : '*͜͡🦋 SUB-BOT 💙*͜͡')}
+೯💙${saludo} ׄ タス 
 
-╭┈────── ❃
-│ 👤 *Usuario:* @${userId.split('@')[0]}
+> *Aquí tienes la lista de mis comandos:*
+
+╭┈───────➤ 👑
 │ 🪷 *Modo:* Privado
 │ 🕒 *Activa hace:* ${uptime}
 │ 👥 *Usuarios:* *${totalreg}*
 │ 🤍 *Comandos:* ${totalCommands}
 │ 🍫 *Baileys:* MekBaileys
-╰─➤ ✎
+╰─➤ 
 
 > Puedes crear tu *SUB-BOT* con #code o #qr ☔
 
