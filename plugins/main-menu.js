@@ -22,7 +22,7 @@ ${(conn.user.jid == global.conn.user.jid ? '*͜͡☔ BOT PRINCIPAL 🌸*͜͡' : 
 > *Aquí tienes la lista de mis comandos:*
 
 ╭┈───────➤ 👑
-│ 🤖 *nemebot:* ${botname}
+│ 🤖 *nemebot:* ${IGRIS-BOT}
 │ 🪐 *Canal OFC:*  https://whatsapp.com/channel/0029VbAfd7zDDmFXm5adcF31
 │ 🪷 *Modo:* Privado
 │ 🕒 *Activa hace:* ${uptime}
