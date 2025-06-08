@@ -1,6 +1,6 @@
 <h1 align="center">☔ IGRIS-BOT ☔</h1>
 
- <img src= "https://files.catbox.moe/9voojs.jpg">
+ <img src= "https://files.catbox.moe/yock44.jpg">
     </p>
 
 ### **`❕️ Información importante`**
