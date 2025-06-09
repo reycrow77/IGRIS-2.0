@@ -8,7 +8,7 @@ let handler = async (m, { conn, args }) => {
     let totalCommands = Object.values(global.plugins).filter((v) => v.help && v.tags).length
 
     let txt = `
-> *Holis Soy* *${botname}*
+> *Holis Soy* *${IGRIS-BOT}*
 Aquí tienes la lista de comandos :3
 ╭┈ ▼
 │❀ 𝖴𝗌𝖾𝗋 » @${userId.split('@')[0]}
